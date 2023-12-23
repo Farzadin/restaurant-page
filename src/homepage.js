@@ -16,28 +16,37 @@ import {
 import { myIntro } from "./textContent.js";
 import myImage from "./home.jpg";
 
-export default function createHomePage() {
+export default function createHome() {
   // Cache DOM
   const content = document.getElementById("content");
 
-  const headerOfPage = header(
+  content.appendChild(createHeader("رستوران من"));
+  content.appendChild(createMain());
+  content.appendChild(createFooter());
+}
+
+function createHeader(title) {
+  const myHeader = header(
     null,
     div(
       { class: "container" },
-      h1({ class: "page-title" }, "رستوران من"),
+      h1({ class: "page-title" }, title),
       nav(
         { class: "nav" },
         ul(
           { class: "nav-list" },
-          li(null, a({ href: "#" }, "منو")),
-          li(null, a({ href: "#" }, "تماس")),
-          li(null, a({ href: "#" }, "رزرو"))
+          li(null, a({ class: "menu" }, "منو")),
+          li(null, a({ class: "contact" }, "تماس"))
         )
       )
     )
   );
 
-  const mainSectionOfPage = main(
+  return myHeader;
+}
+
+function createMain() {
+  const myMain = main(
     null,
     div(
       { class: "container" },
@@ -48,8 +57,11 @@ export default function createHomePage() {
       )
     )
   );
+  return myMain;
+}
 
-  const footerOfPage = footer(
+function createFooter() {
+  const myFooter = footer(
     null,
     div(
       { class: "container" },
@@ -59,8 +71,7 @@ export default function createHomePage() {
       )
     )
   );
-
-  content.appendChild(headerOfPage);
-  content.appendChild(mainSectionOfPage);
-  content.appendChild(footerOfPage);
+  return myFooter;
 }
+
+export { createFooter, createHeader };
