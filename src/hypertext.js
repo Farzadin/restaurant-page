@@ -63,7 +63,7 @@ function img(attributes = {}, ...children) {
 }
 
 function p(attributes = {}, ...children) {
-  return createElement("img", attributes, ...children);
+  return createElement("p", attributes, ...children);
 }
 
 export { header, div, h1, nav, ul, li, a, main, section, p, img, footer };
