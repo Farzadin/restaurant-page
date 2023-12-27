@@ -66,4 +66,8 @@ function p(attributes = {}, ...children) {
   return createElement("p", attributes, ...children);
 }
 
-export { header, div, h1, nav, ul, li, a, main, section, p, img, footer };
+function i(attributes = {}, ...children) {
+  return createElement("i", attributes, ...children);
+}
+
+export { header, div, h1, nav, ul, li, a, main, section, p, img, footer, i };
