@@ -1,4 +1,21 @@
-import { h1, header, div, nav, ul, li, a, p, footer, i } from "./hypertext.js";
+import {
+  h1,
+  header,
+  div,
+  nav,
+  ul,
+  li,
+  a,
+  p,
+  footer,
+  i,
+  main,
+  section,
+  img,
+} from "./hypertext.js";
+
+import { myIntro } from "./textContent.js";
+import restaurant from "./restaurant.jpg";
 
 function createFooter() {
   const myFooter = footer(
@@ -45,4 +62,20 @@ function createHeaderWithNavigation(title) {
   return myHeader;
 }
 
-export { createFooter, createHeaderWithNavigation };
+function createHomeContent() {
+  const homeContents = main(
+    { class: "main" },
+    div(
+      { class: "container" },
+      section(
+        { class: "home-content" },
+        p({ class: "intro" }, myIntro),
+        img({ src: restaurant, class: "restaurant-img" })
+      )
+    )
+  );
+
+  return homeContents;
+}
+
+export { createFooter, createHeaderWithNavigation, createHomeContent };
