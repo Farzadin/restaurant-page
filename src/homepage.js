@@ -1,15 +1,13 @@
 import {
   createHeaderWithNavigation,
   createFooter,
-  createHomeContent,
+  createHomeContentWithMain,
 } from "./components.js";
 
-export default function createHome() {
-  // Cache DOM
+export default function createHomePage() {
   const content = document.getElementById("content");
 
-  // Render
   content.appendChild(createHeaderWithNavigation("رستوران من"));
-  content.appendChild(createHomeContent());
+  content.appendChild(createHomeContentWithMain());
   content.appendChild(createFooter());
 }
