@@ -1,19 +1,18 @@
 import {
-  h1,
   header,
   div,
+  h1,
   nav,
   ul,
   li,
   a,
-  p,
-  footer,
-  i,
   main,
   section,
+  p,
   img,
+  footer,
+  i,
 } from "./hypertext.js";
-
 import { myIntro } from "./textContent.js";
 import restaurant from "./restaurant.jpg";
 
@@ -62,7 +61,20 @@ function createHeaderWithNavigation(title) {
   return myHeader;
 }
 
-function createHomeContent() {
+function createHomeContentWithoutMain() {
+  const homeContents = div(
+    { class: "container" },
+    section(
+      { class: "home-content" },
+      p({ class: "intro" }, myIntro),
+      img({ src: restaurant, class: "restaurant-img" })
+    )
+  );
+
+  return homeContents;
+}
+
+function createHomeContentWithMain() {
   const homeContents = main(
     { class: "main" },
     div(
@@ -78,4 +90,9 @@ function createHomeContent() {
   return homeContents;
 }
 
-export { createFooter, createHeaderWithNavigation, createHomeContent };
+export {
+  createFooter,
+  createHeaderWithNavigation,
+  createHomeContentWithMain,
+  createHomeContentWithoutMain,
+};
