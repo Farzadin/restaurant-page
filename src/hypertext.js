@@ -30,6 +30,14 @@ function h1(attributes = {}, ...children) {
   return createElement("h1", attributes, ...children);
 }
 
+function h2(attributes = {}, ...children) {
+  return createElement("h2", attributes, ...children);
+}
+
+function h3(attributes = {}, ...children) {
+  return createElement("h3", attributes, ...children);
+}
+
 function nav(attributes = {}, ...children) {
   return createElement("nav", attributes, ...children);
 }
@@ -66,8 +74,29 @@ function p(attributes = {}, ...children) {
   return createElement("p", attributes, ...children);
 }
 
+function span(attributes = {}, ...children) {
+  return createElement("span", attributes, ...children);
+}
+
 function i(attributes = {}, ...children) {
   return createElement("i", attributes, ...children);
 }
 
-export { header, div, h1, nav, ul, li, a, main, section, p, img, footer, i };
+export {
+  header,
+  nav,
+  h1,
+  h2,
+  h3,
+  div,
+  ul,
+  li,
+  a,
+  main,
+  section,
+  p,
+  img,
+  footer,
+  i,
+  span,
+};
