@@ -2,6 +2,7 @@ import createHomePage from "./homepage.js";
 import createMenu from "./menu.js";
 import createContacts from "./contacts.js";
 import { createHomeContentWithoutMain } from "./components.js";
+import "./style.css";
 
 window.addEventListener("DOMContentLoaded", () => {
   createHomePage();
