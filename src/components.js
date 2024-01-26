@@ -23,10 +23,10 @@ function createFooter() {
       { class: "container" },
       p(
         null,
-        "© Farzad DianatKhah 2023",
+        "© Farzad DianatKhah 2024 ",
         a(
           { href: "https://github.com/Farzadin" },
-          i({ class: "fab fa-github" })
+          i({ class: "fa-brands fa-github" })
         )
       )
     )
