@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+/* Css Reset */
+
+/* Utilities */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 16px;
+}
+
+/* General Styling */
+html {
+  direction: rtl;
+  font-family: "Vazirmatn", sans-serif;
+}
+
+#content {
+  position: relative;
+  min-height: 100vh;
+}
+
+main {
+  padding-bottom: 2.5rem;
+}
+
+section > * + * {
+  margin-top: 16px;
+}
+
+.header > .container {
+  border-bottom: 1px solid lightgray;
+}
+
+.page-title {
+  line-height: 1;
+}
+
+.restaurant-img {
+  max-height: 400px;
+  margin: 16px auto 0 auto;
+  border-radius: 8px;
+}
+
+/* Navigation */
+.nav {
+  margin-top: 16px;
+}
+
+.nav-list {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-list > li > a:hover,
+.nav-list > li > a:focus {
+  color: red;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Menu */
+.menu-content {
+  margin-top: 16px;
+}
+
+.menu-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5em;
+}
+
+.menu-item {
+  display: flex;
+}
+
+.menu-item-img {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+  border: solid blanchedalmond;
+}
+
+.menu-item-heading {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-item-text {
+  margin-right: 16px;
+  text-align: right;
+}
+
+@media screen and (min-width: 992px) {
+  .menu {
+    font-size: 16px;
+  }
+
+  .menu-group {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .menu-item-img {
+    width: 125px;
+    height: 125px;
+  }
+}
+
+/* contact */
+.contact-container {
+  text-align: right;
+  background: whitesmoke;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.manager-title {
+  color: darkgray;
+  margin-top: -8px;
+  margin-bottom: 8px;
+}
+
+/* footer */
+.footer {
+  direction: ltr;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.footer a {
+  color: black;
+}
