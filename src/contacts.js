@@ -6,9 +6,12 @@ export default function createContacts() {
     section(
       {},
       h2({ class: "contact-title" }, "تماس"),
-      p({ class: "manager-name" }, "ممد بوقی"),
-      p({ class: "manager-title" }, "مدیریت"),
-      p({ class: "manager-phone-number" }, "555-222-333")
+      div(
+        { class: "contact-container" },
+        p({ class: "manager-name" }, "ممد بوقی"),
+        p({ class: "manager-title" }, "مدیریت"),
+        p({ class: "manager-phone-number" }, "555-222-333")
+      )
     )
   );
 
